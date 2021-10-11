@@ -1,0 +1,35 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = demo_01_Create.exe demo_02_Items.exe demo_03_Vectors.exe demo_04_Sort.exe demo_05_StringTokens.exe demo_06_Trees.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+demo_01_Create.exe: demo_01_Create.dpr
+  $(DCC)
+
+demo_02_Items.exe: demo_02_Items.dpr
+  $(DCC)
+
+demo_03_Vectors.exe: demo_03_Vectors.dpr
+  $(DCC)
+
+demo_04_Sort.exe: demo_04_Sort.dpr
+  $(DCC)
+
+demo_05_StringTokens.exe: demo_05_StringTokens.dpr
+  $(DCC)
+
+demo_06_Trees.exe: demo_06_Trees.dpr
+  $(DCC)
+
+
